@@ -1,6 +1,6 @@
 package solution;
 
-import org.example.service.Service;
+import service.Service;
 
 public class Task2 {
 
