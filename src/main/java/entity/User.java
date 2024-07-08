@@ -1,4 +1,4 @@
-package user;
+package entity;
 
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public class User {
         User user = new User();
         user.setId(11);
         user.setName("test");
-        user.setUsername("user");
+        user.setUsername("entity");
         user.setEmail("asdasd@gmail.com");
         user.setAddress(createDefaultAddress());
         user.setPhone("+380-------");

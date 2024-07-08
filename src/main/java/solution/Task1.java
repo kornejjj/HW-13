@@ -2,7 +2,7 @@ package solution;
 
 import com.google.gson.Gson;
 import service.Service;
-import user.User;
+import entity.User;
 
 public class Task1 {
 
