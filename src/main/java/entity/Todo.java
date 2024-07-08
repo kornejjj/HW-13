@@ -1,6 +1,11 @@
 package entity;public class Todo {
-    private String title;
-    private String id;
+    public String  title;
+    public final String id;
+
+    public Todo(String title, String id) {
+        this.title = title;
+        this.id = id;
+    }
 
     public boolean isCompleted() {
         return false;
