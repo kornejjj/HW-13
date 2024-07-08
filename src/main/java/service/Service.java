@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import entity.Post;
+import entity.Todo;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.*;
 import org.apache.http.entity.StringEntity;
@@ -32,7 +34,7 @@ public class Service {
     }
 
     // Method to create a new user
-    public User createNewUser(User user) throws IOException {
+    public User createNewUser(String user) throws IOException {
         HttpPost request = new HttpPost(BASE_URL);
         String jsonUser = gson.toJson(user);
         request.setEntity(new StringEntity(jsonUser));
@@ -44,7 +46,7 @@ public class Service {
     }
 
     // Method to update an existing user
-    public User updateUser(int userId, User updatedUser) throws IOException {
+    public User updateUser(int userId, String updatedUser) throws IOException {
         HttpPut request = new HttpPut(BASE_URL + "/" + userId);
         String jsonUser = gson.toJson(updatedUser);
         request.setEntity(new StringEntity(jsonUser));
@@ -200,3 +202,39 @@ public class Service {
     }
 
 }
+//{
+//    "postId": 10,
+//    "id": 46,
+//    "name": "dignissimos et deleniti voluptate et quod",
+//    "email": "Jeremy.Harann@waino.me",
+//    "body": "exercitationem et id quae cum omnis\nvoluptatibus accusantium et quidem\nut ipsam sint\ndoloremque illo ex atque necessitatibus sed"
+//  },
+//  {
+//    "postId": 10,
+//    "id": 47,
+//    "name": "rerum commodi est non dolor nesciunt ut",
+//    "email": "Pearlie.Kling@sandy.com",
+//    "body": "occaecati laudantium ratione non cumque\nearum quod non enim soluta nisi velit similique voluptatibus\nesse laudantium consequatur voluptatem rem eaque voluptatem aut ut\net sit quam"
+//  },
+//  {
+//    "postId": 10,
+//    "id": 48,
+//    "name": "consequatur animi dolorem saepe repellendus ut quo aut tenetur",
+//    "email": "Manuela_Stehr@chelsie.tv",
+//    "body": "illum et alias quidem magni voluptatum\nab soluta ea qui saepe corrupti hic et\ncum repellat esse\nest sint vel veritatis officia consequuntur cum"
+//  },
+//  {
+//    "postId": 10,
+//    "id": 49,
+//    "name": "rerum placeat quae minus iusto eligendi",
+//    "email": "Camryn.Weimann@doris.io",
+//    "body": "id est iure occaecati quam similique enim\nab repudiandae non\nillum expedita quam excepturi soluta qui placeat\nperspiciatis optio maiores non doloremque aut iusto sapiente"
+//  },
+//  {
+//    "postId": 10,
+//    "id": 50,
+//    "name": "dolorum soluta quidem ex quae occaecati dicta aut doloribus",
+//    "email": "Kiana_Predovic@yasmin.io",
+//    "body": "eum accusamus aut delectus\narchitecto blanditiis quia sunt\nrerum harum sit quos quia aspernatur vel corrupti inventore\nanimi dicta vel corporis"
+//  }
+//]

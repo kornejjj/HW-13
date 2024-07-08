@@ -1,4 +1,4 @@
-package service;public class Todo {
+package entity;public class Todo {
     private String title;
     private String id;
 
